@@ -15,12 +15,12 @@ st.set_page_config(
     layout="wide"
 )
 
-nltk.download("stopwords")
-nltk.download("punkt")
-
-# @st.cache_resource
-# def download_en_core_web_sm():
-#     subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+try:
+    stopwords.words("english")
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download("stopwords")
+    nltk.download("punkt")
 
 nlp = spacy.load("en_core_web_sm")
 
