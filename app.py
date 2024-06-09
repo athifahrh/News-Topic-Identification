@@ -18,11 +18,11 @@ st.set_page_config(
 nltk.download("stopwords")
 nltk.download("punkt")
 
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
+@st.cache_resource
+def download_en_core_web_sm():
     subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
-    nlp = spacy.load("en_core_web_sm")
+
+nlp = spacy.load("en_core_web_sm")
 
 with st.sidebar:
     st.write("Pilih model")
