@@ -9,7 +9,6 @@ import numpy as np
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from gensim import models, corpora
-from custom_lda import guidedlda
 
 st.set_page_config(
     page_title="Identifikasi Topik Berita",
