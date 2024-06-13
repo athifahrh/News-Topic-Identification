@@ -2,7 +2,7 @@ from __future__ import absolute_import, unicode_literals  # noqa
 
 import os
 
-import lda.utils
+import custom_lda.utils
 
 
 _test_dir = os.path.join(os.path.dirname(__file__), 'tests')

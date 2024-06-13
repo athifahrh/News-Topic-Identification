@@ -4,7 +4,7 @@ import os
 
 # import guidedlda.utils
 ## edit 1.9.2020
-import lda.guidedutils
+import custom_lda.guidedutils
 
 
 _test_dir = os.path.join(os.path.dirname(__file__), 'tests')
